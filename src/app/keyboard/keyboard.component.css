@@ -1,0 +1,23 @@
+button {
+	height: 110px;
+	width: 40px;
+	margin: 10px;
+	background: white;
+}
+
+.key {
+	display: inline-block;
+}
+
+.keyboard {
+	height: 150px;
+	width: 800px;
+	background: gray;
+	text-align: center;
+}
+
+.active {
+	background: purple;
+	border-style: solid;
+	border-color: purple;
+}
