@@ -9,11 +9,12 @@ import { AppComponent }  from './app.component';
 import { KeyboardComponent } from './keyboard/keyboard.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ModeComponent } from './mode/mode.component';
 
 
 @NgModule({
   imports:      [ BrowserModule, MaterialModule ],
-  declarations: [ AppComponent, KeyboardComponent , HeaderComponent, FooterComponent],
+  declarations: [ AppComponent, KeyboardComponent , HeaderComponent, FooterComponent, ModeComponent],
   bootstrap:    [ AppComponent ]
 })
 

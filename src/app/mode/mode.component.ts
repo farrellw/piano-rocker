@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'mode-component',
@@ -7,10 +7,18 @@ import { Component } from '@angular/core';
 })
 
 export class ModeComponent  { 
-	
+	private _passedThroughMode: string;
+	private _modeSubject: any;
+
 	constructor(){}
 
 	ngOnInit() {
 	}
 
+	@Input()
+		set modeSubject(modeSubject: any){this._modeSubject = modeSubject;}
+
+	clickMode(mode: string){
+		this._modeSubject.next({ mode: mode })
+	}
 }

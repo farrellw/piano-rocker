@@ -3,12 +3,12 @@
 <head>
 	<title></title>
 </head>
-<body>
+<body [class]="mode">
 	<header>
 		<header-component></header-component>
+		<mode-component [modeSubject]="modeSubject"></mode-component>
 	</header>
-	<main>
-		<div><p>{{name}}</p></div>
+	<main id="page-container">
 		<keyboard-component></keyboard-component>
 	</main>
 	<footer>

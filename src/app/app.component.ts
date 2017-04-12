@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { BehaviorSubject } from "rxjs/Rx";
+import { Subscription } from "rxjs/Subscription";
 
 @Component({
   selector: 'my-app',
@@ -7,12 +9,27 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent  { 
-	public name: string;
+	public mode: string;
+	public modeSubject: BehaviorSubject<any> = new BehaviorSubject<any>({ mode: 'classic' });
+	private _modeSubscription: Subscription;
 
 	constructor(){}
 
 	ngOnInit() {
-		this.name = 'Willie'; 
+		this._modeSubscription = this.modeSubject.asObservable().subscribe(modeObject => {
+			if(modeObject && modeObject.mode){
+				this.mode = modeObject.mode;
+			}
+		});
+ 
 	}
+
+	style(){
+		return this.mode;
+	}
+
+	ngOnDestroy() {
+    	this._modeSubscription.unsubscribe();
+  	}
 
 }
