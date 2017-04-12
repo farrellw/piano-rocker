@@ -1,3 +1,19 @@
 button {
 	background: red;
 }
+/*
+#page-container {
+	background-color: blue;
+}*/
+
+.classic {
+	background-color: #b9d1f7;
+}
+
+.rocker {
+	background-color: #f7c9b9;
+}
+
+.learner {
+	background-color: #cbefb8;
+}
