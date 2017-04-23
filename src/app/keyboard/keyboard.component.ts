@@ -28,6 +28,7 @@ export class KeyboardComponent  {
 			'k': false,
 			'l': false,
 			';': false,
+			"'": false
 		}
 
 		this.notes = {
